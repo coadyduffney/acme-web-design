@@ -32,14 +32,15 @@
       <nav class="navbar">
         <div class="container">
           <a href="#!" class="logo">
+            <!-- <h1>ACME Web</h1> -->
             <img src="assets/imgs/acme-web-logo-alt.png" alt="Logo" />
           </a>
           <ul class="navbar-list">
-            <li><a href="#!" class="active">Home</a></li>
-            <li><a href="#!">Services</a></li>
-            <li><a href="#!">Portfolio</a></li>
-            <li><a href="#!">Team</a></li>
-            <li><a href="#!">Contact</a></li>
+            <li><a href="#!" class="active" id="home-link">Home</a></li>
+            <li><a href="#services" id="services-link">Services</a></li>
+            <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+            <li><a href="#team" id="team-link">Team</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -251,14 +252,35 @@
               placeholder="Your message here..."
             ></textarea>
           </div>
-          <input type="submit" value="Submit" id="input-submit"
-          onclick="submitForm(event)"
+          <input
+            type="submit"
+            value="Submit"
+            id="input-submit"
+            onclick="submitForm(event)"
+          />
         </form>
       </div>
     </section>
+
+    <footer>
+      <div class="container">
+        <div class="col"><p>Copyright &copy; 2019</p></div>
+        <div class="col">
+          <img src="assets/imgs/acme-web-logo-alt.png" alt="Logo" />
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="#!">Privacy Policy</a></li>
+            <li><a href="#!">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
   <!-- Sweet Alerts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Custom JS -->
   <script src="/js/main.js"></script>
 </html>
