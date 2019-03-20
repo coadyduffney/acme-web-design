@@ -22,10 +22,21 @@
 
 // Animate Smooth Scroll for Nav
 $('#home-link').on('click', function() {
-  const home = $('#home').position().top;
+  const hero = $('#hero').position().top;
   $('html, body').animate(
     {
-      scrollTop: home
+      scrollTop: hero
+    },
+    700
+  );
+});
+
+// Animate Smooth Scroll for Nav
+$('#logo-link').on('click', function() {
+  const hero = $('#hero').position().top;
+  $('html, body').animate(
+    {
+      scrollTop: hero
     },
     700
   );
@@ -60,7 +71,6 @@ $('#portfolio-link').on('click', function() {
     700
   );
 });
-
 $('#team-link').on('click', function() {
   const team = $('#team').position().top;
   $('html, body').animate(
@@ -80,6 +90,7 @@ $('#contact-link').on('click', function() {
     700
   );
 });
+
 function submitForm(e) {
   e.preventDefault();
   Swal.fire({
