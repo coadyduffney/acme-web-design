@@ -30,14 +30,8 @@
   z-index: 1030;
 }
 
-.invert-nav {
-  background-color: #333;
-  color: #ffffff;
-  transition: background-color 1s ease 0s;
-}
-
-.invert-nav-logo {
-  color: #ffffff;
+.navbar .icon {
+  display: none;
 }
 
 .navbar .container {
@@ -52,11 +46,6 @@
 
 .logo img {
   max-width: 200px;
-}
-
-.logo h1 {
-  font-family: 'Righteous', cursive;
-  color: #333;
 }
 
 .navbar-list {
@@ -74,7 +63,7 @@
 
 .navbar-list li a {
   display: block;
-  width: 60px;
+  width: 100%;
   text-decoration: none;
   color: #333;
   border-bottom: 2px solid transparent;
@@ -463,10 +452,8 @@ footer .container .col ul li a {
 }
 
 footer .container .col ul li a:hover {
-  color: #444;
-  webkit-transform: scale(1.1);
   transform: scale(1.1);
-  transition: all ease 0.3s;
+  transition: all ease 0.5s;
 }
 
 /* MEDIA QUERY BREAKPOINTS */
@@ -489,6 +476,81 @@ footer .container .col ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  .navbar .container {
+    display: block;
+  }
+
+  .navbar .container a.logo {
+    float: left;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    color: #333;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  .navbar.responsive .container ul.navbar-list {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+  }
+  .navbar.responsive .container ul.navbar-list li {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+
+  #contact form {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .container .col {
+    width: 100%;
+    margin: 0.2rem;
+  }
+
+  /* Select middle col in footer and hide it */
+  footer .container .col:not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+  }
+
+  #services {
+    /* padding: 3rem; */
+  }
+
   .services-row {
     flex-direction: column;
   }
@@ -512,7 +574,21 @@ footer .container .col ul li a:hover {
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 500px) {
+  #hero h1 {
+    font-size: 3rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #services,
+  #portfolio,
+  #team,
+  #contact {
+    padding: 1.8rem;
+  }
+
   #team .team-row {
     flex-direction: column;
   }

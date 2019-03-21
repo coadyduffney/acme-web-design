@@ -1,24 +1,23 @@
-// $(document).ready(function() {
-//   animateNav();
-//   $(window).scroll(function() {
-//     animateNav();
-//   });
-// });
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById('nav');
+  if (x.className === 'navbar') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'navbar';
+  }
+}
 
-// // Transition effect for navbar
-// function animateNav() {
-//   if ($(this).scrollTop() > 200) {
-//     $('.navbar').addClass('invert-nav');
-//     $('.logo').addClass('invert-nav-logo');
-//     $('.navbar').addClass('invert');
-//     $('.navbar').addClass('invert');
-
-//     // $('.navbar-brand').addClass('visible');
-//   } else {
-//     $('.navbar').removeClass('invert');
-//     $('.navbar-brand').removeClass('visible');
-//   }
-// }
+function submitForm(e) {
+  e.preventDefault();
+  Swal.fire({
+    title: 'Message Sent!',
+    text: "We'll be in touch as soon as possible.",
+    type: 'success',
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#333'
+  });
+}
 
 // Animate Smooth Scroll for Nav
 $('#home-link').on('click', function() {
@@ -90,14 +89,3 @@ $('#contact-link').on('click', function() {
     700
   );
 });
-
-function submitForm(e) {
-  e.preventDefault();
-  Swal.fire({
-    title: 'Message Sent!',
-    text: "We'll be in touch as soon as possible.",
-    type: 'success',
-    confirmButtonText: 'OK',
-    confirmButtonColor: '#333'
-  });
-}
