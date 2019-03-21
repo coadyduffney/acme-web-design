@@ -1,8 +1,2 @@
-<h1>ACME Web Design TODO's</h1>
-<ul>
-  <li>Add Scrollspy to navbar</li>
-  <li>Make navbar & footer more responsive on smaller device widths</li>
-  <li>Make hero text smaller on small devices</li>
-  <li>Add project modals</li>
-  <li>Invert navbar colors on scroll</li>
-</ul>
+<h1>ACME Web Design</h1>
+<p>ACME Web is a fully responsive landing page with a modern design I developed using only HTML, CSS and a small amount of jQuery. I wanted to test my knowledge of HTML & CSS by designing and developing a website with no CSS frameworks or external libraries such as Bootstrap or Materialize.</p>
